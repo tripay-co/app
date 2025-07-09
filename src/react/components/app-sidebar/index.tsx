@@ -7,7 +7,6 @@ import {
    SidebarMenuButton,
    SidebarMenuItem,
 } from "@/react/components/ui/sidebar"
-import logoIcon from "@/assets/logo-payturismo-icon.png"
 import type { ComponentProps } from "react"
 import { APPBAR_CONTROL } from "./data"
 import { NavMain } from "./components/navigation/main"
@@ -25,7 +24,6 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
                   <SidebarMenuButton size="lg" asChild>
                      <div>
                         <div className="flex items-center justify-center rounded-lg aspect-square size-8 text-sidebar-primary-foreground">
-                           <img src={logoIcon} />
                         </div>
                         <div className="grid flex-1 text-sm leading-tight text-left">
                            <span className="font-semibold truncate">Payturismo</span>

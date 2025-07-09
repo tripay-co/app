@@ -17,9 +17,9 @@ export const useAuthentication = () => {
 
    const form = useForm({
       resolver: zodResolver(loginSchema),
-      mode: 'onBlur',
+      mode: 'onSubmit',
       defaultValues: {
-         login: '',
+         email: '',
          password: ''
       }
    })

@@ -20,13 +20,13 @@ export function LoginForm({ form, isLoading }: LoginProps) {
          <div className="grid gap-6">
             <FormField
                control={form.control}
-               name="login"
+               name="email"
                render={({ field }) => (
                   <FormItem>
-                     <FormLabel>CPF</FormLabel>
+                     <FormLabel>E-mail</FormLabel>
                      <FormControl>
                         <Input
-                           placeholder="Digite seu CPF"
+                           placeholder="exemplo@email.com.br"
                            {...field}
                         />
                      </FormControl>

@@ -2,17 +2,13 @@ import { z } from "zod"
 
 
 export const loginSchema = z.object({
-   login: z.string({
-      required_error: 'CPF é obrigatório',
-      invalid_type_error: 'CPF é inválido'
+   email: z.string({
+      required_error: 'E-mail é obrigatório',
+      invalid_type_error: 'E-mail inválido'
    }).min(1, {
-      message: 'CPF é obrigatório'
-   }).refine((value) => {
-      const isText = /^[a-zA-Z0-9_]+$/.test(value)
-      const isCPF = /^\d{11}$/.test(value)
-      return isText || isCPF
-   }, {
-      message: 'Digite um CPF válido'
+      message: 'E-mail é obrigatório'
+   }).email({
+      message: 'E-mail inválido'
    }),
    password: z.string({
       required_error: 'Senha obrigatória',

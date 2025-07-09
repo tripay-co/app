@@ -3,7 +3,7 @@ import type { AccountModel } from "../models/account-model"
 
 export namespace Authentication {
    export type Params = {
-      login: string
+      email: string
       password: string
    }
 

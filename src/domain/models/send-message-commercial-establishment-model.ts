@@ -1,4 +1,0 @@
-
-
-
-export type SendMessageCommercialEstablishmentModel = void
