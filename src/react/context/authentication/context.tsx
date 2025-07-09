@@ -1,7 +1,6 @@
 import type { AccountModel } from "@/domain/models"
 import { createContext, useCallback, useEffect, useMemo, useState } from "react"
 import type { AuthenticationContextArgsType } from "./types"
-import { velidateSessionService } from "@/infra/services/validate-session"
 import { ForbiddenError, UnexpectedError } from "@/domain/errors"
 
 
@@ -40,8 +39,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             if (storedAuth) {
                const parsedAuth: AccountModel = JSON.parse(storedAuth)
 
-               await velidateSessionService.validate({ token: parsedAuth.accessToken })
-
                setAuth(parsedAuth)
             }
          } catch (error) {
@@ -55,17 +52,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       initializeAuth()
    }, [])
-
-   useEffect(() => {
-      if (auth?.accessToken) {
-         velidateSessionService.validate({ token: auth.accessToken })
-            .catch((error) => {
-               if (error instanceof ForbiddenError || error instanceof UnexpectedError) {
-                  logout()
-               }
-            })
-      }
-   }, [auth, logout])
 
    const values = useMemo(() => ({
       setInformationAccountControl,
