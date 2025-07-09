@@ -1,0 +1,13 @@
+export const STATUS_PROCESS = [
+   "APELADA",
+   "REQUERIDA",
+   "REQUERIDO",
+   "VITIMA",
+   "REU",
+   "REQUERENTE",
+   "RECLAMADA",
+   "EXECUTADA",
+   "AGRAVADO",
+   "AGRAVADA",
+   "EXECUTADO",
+]

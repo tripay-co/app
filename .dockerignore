@@ -1,0 +1,8 @@
+.vscode
+.editorconfig
+.gitlab-ci.yml
+.gitignore
+.git
+
+node_modules
+build
