@@ -24,7 +24,7 @@ export function Carrousel() {
    }, [])
 
    return (
-      <div className="relative h-full overflow-hidden rounded-l-3xl">
+      <div className="relative h-full overflow-hidden">
          {slides.map((slide, index) => (
             <div
                key={index}
@@ -32,7 +32,6 @@ export function Carrousel() {
                   index === currentSlide ? "opacity-100" : "opacity-0"
                }`}
             >
-               {/* Imagem de fundo */}
                <img src={slide.image || "/placeholder.svg"} alt={slide.title} className="w-full h-full object-cover" />
 
                <div className="absolute inset-0 bg-black/70" />

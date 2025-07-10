@@ -5,4 +5,5 @@ export const PATHS = {
   FORGOT_PASSWORD: "/esqueci-minha-senha",
   USERS_LIST: "/usuarios",
   USERS_DETAILS: (id: string) => `/usuario/${id}`,
+  REGISTER: "/cadastro",
 }

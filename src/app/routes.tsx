@@ -8,6 +8,7 @@ import { DashboardLayout } from "@/react/layouts/dashboard"
 import { Metrics } from "@/react/pages/metrics"
 import { RequireAuth } from "./auth"
 import { ROLES } from "./roles"
+import { MultiStepFormDemo } from "@/react/pages/auth/create"
 
 
 const routes: RouteObject[] = [
@@ -33,6 +34,7 @@ const routes: RouteObject[] = [
           { index: true, element: <LoginPage /> },
           { path: PATHS.FORGOT_PASSWORD, element: <ForgotPassword /> },
           { path: PATHS.RESET_PASSWORD, element: <ResetPassword /> },
+          { path: PATHS.REGISTER, element: <MultiStepFormDemo /> },
         ],
       },
     ],

@@ -3,18 +3,23 @@ import { useState } from "react"
 import { Eye, EyeOff } from "lucide-react"
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/react/components/ui/form"
 import type { LoginProps } from "../types"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { PATHS } from "@/app/paths"
 
 
 export function LoginForm({ form, isLoading }: LoginProps) {
    const [showPassword, setShowPassword] = useState(false)
-   
+
    const navigate = useNavigate()
 
    const handleNavigateForgotPassword = () => {
       navigate(PATHS.FORGOT_PASSWORD)
    }
+
+   const handleNavigateRegister = () => {
+      navigate(PATHS.REGISTER)
+   }
+
    return (
       <div className="flex flex-col gap-6 mt-5 max-w-200 w-full mx-auto">
          <div className="grid gap-6">
@@ -91,9 +96,9 @@ export function LoginForm({ form, isLoading }: LoginProps) {
          </div>
 
          <div className="text-center text-sm">
-            <a href="#" className="underline underline-offset-4">
+            <Link to="#" onClick={handleNavigateRegister} className="underline underline-offset-4">
                Cadastre-se
-            </a>
+            </Link>
          </div>
       </div>
    )
