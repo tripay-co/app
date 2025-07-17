@@ -14,12 +14,14 @@ export class ResetPasswordRepositoryImpl implements ResetPasswordRepository {
    async reset(params: ResetPassword.Params): Promise<ResetPassword.Model> {
       const httpRepsonse = await this.httpClient.request({
          url: this.url,
-         method: 'post',
+         method: 'put',
          body: params
       })
 
       switch (httpRepsonse.statusCode) {
-         case HttpStatusCode.ok: return httpRepsonse.body as ResetPassword.Model
+         case HttpStatusCode.ok: 
+         case HttpStatusCode.noContent: 
+            return httpRepsonse.body as ResetPassword.Model
          case HttpStatusCode.unauthorized: throw new UnauthorizedError("Unauthorized")
          case HttpStatusCode.badRequest: throw new BadRequestError(JSON.stringify(httpRepsonse.body, null, 2))
          default: throw new UnexpectedError("Unexpected error")

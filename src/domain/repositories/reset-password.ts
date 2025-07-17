@@ -3,9 +3,9 @@ import type { ResetPasswordModel } from "../models/reset-password-model"
 
 export namespace ResetPassword {
    export type Params = {
-      newPassword: string
-      email: string | null
       token: string | null
+      email: string | null
+      newPassword: string
    }
 
    export type Model = ResetPasswordModel

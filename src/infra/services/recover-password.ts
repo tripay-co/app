@@ -6,6 +6,6 @@ import { RecoverPasswordRepositoryImpl } from "@/data/repositories/recover-passw
 const httpClient = new AxiosHttpClient()
 
 export const recoverPasswordService = new RecoverPasswordRepositoryImpl(
-   `${BASE_URL}/users/forgot-password`,
+   `${BASE_URL}/auth/password`,
    httpClient
 )

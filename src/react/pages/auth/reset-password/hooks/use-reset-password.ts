@@ -29,7 +29,6 @@ export const useResetPasswordForm = () => {
    const { mutate, isPending } = useMutation({
       mutationKey: ['forgot-password'],
       mutationFn: async (data: ResetPasswordRequest) => {
-         console.log(data)
          const apiResponse = await resetPasswordService.reset({
             token,
             email,

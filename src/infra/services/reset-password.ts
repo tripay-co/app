@@ -6,6 +6,6 @@ import { BASE_URL } from "@/lib/axios"
 const httpClient = new AxiosHttpClient()
 
 export const resetPasswordService = new ResetPasswordRepositoryImpl(
-   `${BASE_URL}/users/reset-password`,
+   `${BASE_URL}/auth/password`,
    httpClient
 )
