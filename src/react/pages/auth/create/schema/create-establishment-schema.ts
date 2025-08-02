@@ -10,7 +10,7 @@ export const basicInfoSchema = z.object({
 
 export const responsibleInfoSchema = z.object({
    responsibleName: z.string().min(1, "Nome obrigatório"),
-   cpf: z.string().min(11, "CPF obrigatório"),
+   cpf: z.string().min(1, "CPF obrigatório"),
    rg: z.string().min(1, "RG obrigatório"),
    rgUf: z.string().length(2, "UF inválido"),
    rgDate: z.string().min(1, "Data de emissão obrigatória"),
@@ -21,7 +21,6 @@ export const responsibleInfoSchema = z.object({
 
 export const contactAndAddressSchema = z.object({
    email: z.string().email("Email inválido"),
-   password: z.string().min(6, "Senha muito curta"),
    phone: z.string().min(10, "Telefone obrigatório"),
    street: z.string().min(1, "Rua obrigatória"),
    number: z.string().min(1, "Número obrigatório"),
