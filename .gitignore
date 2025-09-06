@@ -27,3 +27,4 @@ dist-ssr
 /html
 
 .env
+.vercel
