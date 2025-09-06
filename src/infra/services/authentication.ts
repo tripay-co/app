@@ -1,6 +1,6 @@
 import { AuthenticationRepositoryImpl } from "@/data/repositories/authentication/authentication"
 import { AxiosHttpClient } from "../axios-http-client"
-import { BASE_URL } from "@/lib/axios"
+import { BASE_URL } from "@/presentation/lib/axios"
 
 
 const httpClient = new AxiosHttpClient()

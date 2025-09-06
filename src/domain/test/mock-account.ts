@@ -3,7 +3,7 @@ import type { Authentication } from "../repositories/authentication"
 
 
 export const mockAuthentication = (): Authentication.Params => ({
-   login: faker.number.int({ min: 11, max: 11 }).toString(),
+   email: faker.number.int({ min: 11, max: 11 }).toString(),
    password: faker.internet.password()
 })
 

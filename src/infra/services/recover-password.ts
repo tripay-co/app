@@ -1,5 +1,5 @@
 import { AxiosHttpClient } from "../axios-http-client"
-import { BASE_URL } from "@/lib/axios"
+import { BASE_URL } from "@/presentation/lib/axios"
 import { RecoverPasswordRepositoryImpl } from "@/data/repositories/recover-password/recover-password"
 
 
