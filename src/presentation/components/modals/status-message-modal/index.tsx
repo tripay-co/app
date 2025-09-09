@@ -86,7 +86,7 @@ const statusData = [
    {
       status: "IMPORT_REGISTER",
       title: "Usuário importado",
-      description: "Este usuário foi importado por um analista, e ainda não realizou o login.",
+      description: "Este usuário foi importado por um analista, e ainda não realizou o Login.",
    },
 ]
 
